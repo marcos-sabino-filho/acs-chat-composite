@@ -72,6 +72,7 @@ const App = () => {
         const userAccessToken = tokenModerator.token;
         const userIdModerator = userModarator.communicationUserId;
 
+        // token refresher it's not optional
         credentialModerador = new AzureCommunicationTokenCredential({
             tokenRefresher: async () => refreshToken(userIdModerator),
             refreshProactively: true,
@@ -123,6 +124,7 @@ const App = () => {
                 const tokenParticipant = await identityClient.createUserAndToken(['chat', 'voip']);
                 const userAccessToken = tokenParticipant.token;
                 const userId = usuarioParticipant.communicationUserId;
+                // token refresher it's not optional
                 const tokenParticipantCredential = new AzureCommunicationTokenCredential({
                     tokenRefresher: async () => refreshToken(userId),
                     refreshProactively: true,

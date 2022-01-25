@@ -23,6 +23,7 @@ import {
     ErrorBadgeIcon,
     ClearIcon,
 } from '@fluentui/react-icons-mdl2';
+// https://uifabricicons.azurewebsites.net/ para mais icones
 
 registerIcons({
     icons: {

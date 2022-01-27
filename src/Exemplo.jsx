@@ -1,4 +1,4 @@
-import { FluentThemeProvider, MessageThread } from '@azure/communication-react';
+import { FluentThemeProvider, MessageThread, TypingIndicator } from '@azure/communication-react';
 import React from 'react';
 import {
     registerIcons,
@@ -63,7 +63,7 @@ const GetHistoryChatMessages = () => {
             mine: false,
             attached: false,
             contentType: 'text'
-        },{
+        }, {
             messageType: 'chat',
             senderId: 'user1',
             senderDisplayName: 'Kat Larsson',
@@ -100,6 +100,13 @@ export const Exemplo = () => {
                 messages={GetHistoryWithSystemMessages()}
                 showMessageDate={true}
                 showMessageStatus={true}
+            />
+            <TypingIndicator
+                strings={{
+                    singleUser: '{user} está digitando...',
+                    multipleUsers: '{users} estão digitando...',
+                }}
+                typingUsers={[{ userId: '1', displayName: 'User1' }]}
             />
         </FluentThemeProvider>
     );

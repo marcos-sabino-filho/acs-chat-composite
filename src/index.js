@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Exemplo } from './Exemplo';
+import { AvisarFechar } from './AvisarFechar';
 import {
   BrowserRouter,
   Routes,
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route exact path="exemplo" element={<Exemplo />} />
+      <Route exact path="fechar" element={<AvisarFechar />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

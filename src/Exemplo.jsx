@@ -88,6 +88,14 @@ const GetHistoryWithSystemMessages = () => {
             messageId: Math.random().toString(),
             iconName: 'PeopleAdd',
             content: 'Miguel Garcia is added to the chat'
+        },
+        {
+            messageType: 'system',
+            createdOn: new Date('2020-04-13T00:00:00.000+07:01'),
+            systemMessageType: 'content',
+            messageId: Math.random().toString(),
+            iconName: 'PeopleBlock',
+            content: 'João saiu do chat'
         }
     ];
 };
